@@ -1,0 +1,13 @@
+name: On-call fire drill
+
+on:
+  workflow_dispatch:
+
+jobs:
+  drill:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deliberately fail
+        run: |
+          echo "Simulating a broken CI step for on-call rehearsal."
+          exit 1
